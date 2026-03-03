@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DivvyUp - Bill Splitting Made Simple</title>
+    <meta name="description"
+        content="DivvyUp makes splitting bills with friends fast, fair, and incredibly simple. Download for iOS today.">
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Subtle Animated Background Elements -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <main class="glass-container">
+        <header class="header">
+            <div class="logo">
+                <h1>DivvyUp</h1>
+            </div>
+            <a href="mailto:Jake@commandamedia.com" class="contact-link">Contact</a>
+        </header>
+
+        <section class="hero">
+            <span class="badge">Now in Beta</span>
+            <h2 class="hero-title">Split bills.<br>Keep friends.</h2>
+            <p class="hero-subtitle">
+                The most elegant way to track expenses, split restaurant checks, and settle up instantly. Designed
+                for iOS.
+            </p>
+
+            <div class="actions">
+                <a href="https://testflight.apple.com/join/GepA8JYT" target="_blank" class="btn-primary"
+                    id="download-btn">
+                    <span class="btn-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17">
+                            </path>
+                        </svg>
+                    </span>
+                    <span class="btn-text">
+                        Download for iOS <br>
+                        <small>via TestFlight</small>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🧾</div>
+                <h3>Smart Scanning</h3>
+                <p>Read receipts instantly with advanced AI.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3>Quick Settle</h3>
+                <p>Pay friends directly via Venmo or CashApp.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Premium Design</h3>
+                <p>A gorgeous interface that feels right at home.</p>
+            </div>
+        </section>
+
+        <footer class="footer"
+            style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--glass-border); color: var(--text-muted); font-size: 0.9rem;">
+            <p>&copy; 2026 DivvyUp.</p>
+            <p>a jake brown app. | <a href="mailto:Jake@commandamedia.com"
+                    style="color: inherit; text-decoration: underline;">Jake@commandamedia.com</a></p>
+        </footer>
+    </main>
+
+    <script>
+        // Add subtle parallax to orbs based on mouse movement
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.bg-orb');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 20;
+                orb.style.transform = `translate(${(x - 0.5) * speed}px, ${(y - 0.5) * speed}px)`;
+            });
+        });
+    </script>
+</body>
+
+</html>
